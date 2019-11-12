@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "949ea560-c051-49d6-b6f1-37418a7939c5",
+		"name": "AponteDDD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ConsultarCuotasCredito",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51308/api/Parcial/Credito/ConsultarCredito?Numero=CRE-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51308",
+					"path": [
+						"api",
+						"Parcial",
+						"Credito",
+						"ConsultarCredito"
+					],
+					"query": [
+						{
+							"key": "Numero",
+							"value": "CRE-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SolicitarCredito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t    \"Numero\" : \"CRE-01\",\n        \"CedulaSolicitante\" : \"1065843703\",\n        \"ValorPrestamo\" : 1000000,\n        \"Fecha\" : \"09-11-2019\",\n        \"PlazoEnMeses\" : 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51308/api/Parcial/Credito/SolicitarCredito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51308",
+					"path": [
+						"api",
+						"Parcial",
+						"Credito",
+						"SolicitarCredito"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
